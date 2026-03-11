@@ -1,4 +1,4 @@
-/* style.css - modernizado e mais badass */
+/* style.css - CORRIGIDO para GitHub Pages */
 
 body {
   margin: 0;
@@ -9,12 +9,17 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-image: radial-gradient(circle at 30% 10%, rgba(115, 0, 255, 0.29) 0%, transparent 30%);
+  /* Removido o gradiente roxo - agora só vermelho */
+  background-image: radial-gradient(circle at 30% 10%, rgba(140, 0, 255, 0.278) 0%, transparent 40%);
+  min-height: 100vh;
+  position: relative;
 }
 
+/* FUNDO FIXO - não rola */
 body::before {
   content: "";
   position: fixed;
+  /* FIXO - não se move */
   top: 0;
   left: 0;
   width: 100%;
@@ -23,12 +28,11 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 55% auto;
-  /* Ajuste o tamanho */
-  opacity: 0.10;
-  /* Bem suave - efeito fantasma */
+  opacity: 0.12;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
+
 
 /* Garante que o conteúdo fique acima */
 .header-badass,
@@ -120,7 +124,6 @@ h1 {
   object-fit: cover;
   border-bottom: 3px solid #e63946;
   background: #333;
-  /* fallback */
 }
 
 .drink-info {
@@ -215,7 +218,7 @@ h1 {
 }
 
 .checkbox-badass input:checked~.checkmark:after {
-  content: "\\f00c";
+  content: "\f00c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;

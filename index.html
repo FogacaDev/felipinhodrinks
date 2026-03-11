@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍸 Felipinho Drinks · Badass</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Barlow:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Ajustes extras para responsividade */
+    @media (max-width: 768px) {
+      .drink-meta {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .drink-preco, .drink-alcool {
+        font-size: 0.9rem;
+        padding: 3px 8px;
+      }
+      .drink-name {
+        font-size: 1.3rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .info-panel {
+        padding: 15px;
+      }
+      .stats {
+        gap: 15px;
+      }
+      .stat-num {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header-badass">
+    <h1>FELIPINHO DRINKS</h1>
+    <div class="tagline">
+      <i class="fas fa-skull"></i> BADASS DRINKS <i class="fas fa-skull"></i>
+    </div>
+    <p class="hero-text">Os drinks mais brutais da quebrada · escolha seu veneno</p>
+  </header>
+
+  <!-- cards de drinks -->
+  <div class="menu">
+
+    <!-- Suór de Moça (CORRIGIDO) -->
+    <div class="drink-card" data-categoria="champagne">
+      <img src="imagens/suordemoca.png" class="drink-image" alt="Suór de Moça" loading="lazy">
+      <div class="drink-info">
+        <div class="drink-name">
+          <i class="fas fa-heart" style="color: #ff6b9d;"></i> Suór de Moça
+        </div>
+        <div class="drink-desc">Champagne de maçã com licor de chocolate picante. Doce e perigoso.</div>
+        <div class="drink-meta">
+          <span class="drink-preco">R$ 40,00</span>
+          <span class="drink-alcool">12%</span>
+        </div>
+        <div class="drink-check">
+          <label class="checkbox-badass">
+            <input type="checkbox" value="Suór de Moça">
+            <span class="checkmark"></span>
+            Quero esse!
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copão Monstro (CORRIGIDO) -->
+    <div class="drink-card" data-categoria="whiskey">
+      <img src="imagens/copaomonstro.png" class="drink-image" alt="Copão Monstro" loading="lazy">
+      <div class="drink-info">
+        <div class="drink-name">
+          <i class="fas fa-dragon" style="color: #e63946;"></i> Copão Monstro
+        </div>
+        <div class="drink-desc">Whiskey da sua preferência com gelo de água de côco e mel, Desce macio e reanima.</div>
+        <div class="drink-meta">
+          <span class="drink-preco">R$ 40,00</span>
+          <span class="drink-alcool">22%</span>
+        </div>
+        <div class="drink-check">
+          <label class="checkbox-badass">
+            <input type="checkbox" value="Copão Monstro">
+            <span class="checkmark"></span>
+            Quero esse!
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quebrada Drink (CORRIGIDO) -->
+    <div class="drink-card" data-categoria="vodka">
+      <img src="imagens/quebradadrink.png" class="drink-image" alt="Quebrada Drink" loading="lazy">
+      <div class="drink-info">
+        <div class="drink-name">
+          <i class="fas fa-bolt" style="color: #f1c40f;"></i> Quebrada Drink
+        </div>
+        <div class="drink-desc">Vodka, energético e toque de limão com agua de côco. Explosão de energia e refrescância.</div>
+        <div class="drink-meta">
+          <span class="drink-preco">R$ 32,00</span>
+          <span class="drink-alcool">20%</span>
+        </div>
+        <div class="drink-check">
+          <label class="checkbox-badass">
+            <input type="checkbox" value="Quebrada Drink">
+            <span class="checkmark"></span>
+            Quero esse!
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Whiskey Smash -->
+    <div class="drink-card" data-categoria="whiskey">
+      <img src="imagens/bourbon.png" class="drink-image" alt="Whiskey Smash" loading="lazy">
+      <div class="drink-info">
+        <div class="drink-name">
+          <i class="fas fa-fire" style="color: #e63946;"></i> Whiskey Smash
+        </div>
+        <div class="drink-desc">Whiskey com limão, hortelã e gelo triturado. Clássico e agressivo.</div>
+        <div class="drink-meta">
+          <span class="drink-preco">R$ 28,90</span>
+          <span class="drink-alcool">16%</span>
+        </div>
+        <div class="drink-check">
+          <label class="checkbox-badass">
+            <input type="checkbox" value="Whiskey Smash">
+            <span class="checkmark"></span>
+            Quero esse!
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vodka Punk -->
+    <div class="drink-card" data-categoria="vodka">
+      <img src="imagens/mojito.png" class="drink-image" alt="Vodka Punk" loading="lazy">
+      <div class="drink-info">
+        <div class="drink-name">
+          <i class="fas fa-bolt" style="color: #f1c40f;"></i> Vodka Punk
+        </div>
+        <div class="drink-desc">Vodka, energético e toque de limão. Explosão de energia.</div>
+        <div class="drink-meta">
+          <span class="drink-preco">R$ 24,90</span>
+          <span class="drink-alcool">14%</span>
+        </div>
+        <div class="drink-check">
+          <label class="checkbox-badass">
+            <input type="checkbox" value="Vodka Punk">
+            <span class="checkmark"></span>
+            Quero esse!
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cerveja IPA -->
+    <div class="drink-card" data-categoria="cerveja">
+      <img src="imagens/cosmopolitan.png" class="drink-image" alt="Cerveja IPA" loading="lazy">
+      <div class="drink-info">
+        <div class="drink-name">
+          <i class="fas fa-mug-hot" style="color: #e67e22;"></i> Cerveja IPA
+        </div>
+        <div class="drink-desc">Artesanal, forte e amarga como deve ser. 650ml.</div>
+        <div class="drink-meta">
+          <span class="drink-preco">R$ 19,90</span>
+          <span class="drink-alcool">7,2%</span>
+        </div>
+        <div class="drink-check">
+          <label class="checkbox-badass">
+            <input type="checkbox" value="Cerveja IPA">
+            <span class="checkmark"></span>
+            Quero esse!
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Margarita Selvagem -->
+    <div class="drink-card" data-categoria="tequila">
+      <img src="imagens/margarita.png" class="drink-image" alt="Margarita Selvagem" loading="lazy">
+      <div class="drink-info">
+        <div class="drink-name">
+          <i class="fas fa-leaf" style="color: #2ecc71;"></i> Margarita Selvagem
+        </div>
+        <div class="drink-desc">Tequila, limão, licor de laranja e sal grosso. Puro rock.</div>
+        <div class="drink-meta">
+          <span class="drink-preco">R$ 32,90</span>
+          <span class="drink-alcool">18%</span>
+        </div>
+        <div class="drink-check">
+          <label class="checkbox-badass">
+            <input type="checkbox" value="Margarita Selvagem">
+            <span class="checkmark"></span>
+            Quero esse!
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Old Fashioned -->
+    <div class="drink-card" data-categoria="whiskey">
+      <img src="imagens/oldfashioned.png" class="drink-image" alt="Old Fashioned" loading="lazy">
+      <div class="drink-info">
+        <div class="drink-name">
+          <i class="fas fa-skull" style="color: #95a5a6;"></i> Old Fashioned
+        </div>
+        <div class="drink-desc">Bourbon, angostura, açúcar e casca de laranja. Respeita os mais velhos.</div>
+        <div class="drink-meta">
+          <span class="drink-preco">R$ 35,90</span>
+          <span class="drink-alcool">22%</span>
+        </div>
+        <div class="drink-check">
+          <label class="checkbox-badass">
+            <input type="checkbox" value="Old Fashioned">
+            <span class="checkmark"></span>
+            Quero esse!
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Área de informações e selos -->
+  <div class="info-panel">
+    <div class="arte-container">
+      <img src="imagens/felipinhodrinks.png" class="arte" alt="Felipinho Drinks">
+      <span class="arte-text">FELIPINHO DRINKS</span>
+    </div>
+
+    <!-- estatísticas e contador -->
+    <div class="stats">
+      <div class="stat-item">
+        <i class="fas fa-glass-cheers"></i>
+        <span class="stat-num" id="drinksCount">0</span>
+        <span class="stat-label">Drinks</span>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-users"></i>
+        <span class="stat-num">+500</span>
+        <span class="stat-label">Clientes</span>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-star"></i>
+        <span class="stat-num">4.9</span>
+        <span class="stat-label">Avaliação</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- botão principal -->
+  <button class="send-button" onclick="enviarPedido()">
+    <i class="fab fa-whatsapp"></i> Enviar Pedido
+  </button>
+
+  <!-- seção de comentários/testemunhos -->
+  <div class="testimonials">
+    <h2 class="section-title"><i class="fas fa-comment-dots"></i> A galera tá falando</h2>
+    <div class="testimonial-container">
+      <div class="testimonial active">
+        <p>"Melhor IPA da cidade, parece que foi feita por monges do rock"</p>
+        <span class="author">- Zé Headbanger</span>
+      </div>
+      <div class="testimonial">
+        <p>"Vodka Punk me fez reviver o underground dos anos 90"</p>
+        <span class="author">- Maria Skull</span>
+      </div>
+      <div class="testimonial">
+        <p>"Atendimento foda e drinks com personalidade. Old Fashioned é BRABO"</p>
+        <span class="author">- Thiago Metal</span>
+      </div>
+    </div>
+    <div class="testimonial-dots">
+      <span class="dot active" onclick="mudarTestimonial(0)"></span>
+      <span class="dot" onclick="mudarTestimonial(1)"></span>
+      <span class="dot" onclick="mudarTestimonial(2)"></span>
+    </div>
+  </div>
+
+  <!-- rodapé badass -->
+  <footer class="footer-badass">
+    <p><i class="fas fa-crown"></i> Felipinho Drinks · desde 2024 · drinks com identidade <i class="fas fa-crown"></i></p>
+    <p class="footer-contato">
+      <i class="fab fa-whatsapp"></i> (15) 99626-3006 |
+      <i class="fab fa-instagram"></i> @felipinhodrinks |
+      <i class="fas fa-map-marker-alt"></i> Votorantim/SP
+    </p>
+  </footer>
+
+  <script>
+    // ----- ENVIAR PEDIDO WHATSAPP -----
+    function enviarPedido() {
+      const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+      if (checkboxes.length === 0) {
+        alert("🔥 SELECIONE PELO MENOS UM DRINK, PORRA! 🔥");
+        return;
+      }
+      
+      const pedidos = Array.from(checkboxes).map(cb => cb.value);
+      const lista = pedidos.join(', ');
+      
+      let total = 0;
+      checkboxes.forEach(cb => {
+        const card = cb.closest('.drink-card');
+        if (card) {
+          const precoSpan = card.querySelector('.drink-preco');
+          if (precoSpan) {
+            const precoTexto = precoSpan.innerText.replace('R$', '').replace(',', '.').trim();
+            total += parseFloat(precoTexto) || 0;
+          }
+        }
+      });
+      
+      const numero = '5515996263006';
+      const mensagem = `🔥 FELIPINHO DRINKS 🔥\n\nQuero os seguintes drinks brabo:\n${lista}\n\n💰 Total: R$ ${total.toFixed(2).replace('.', ',')}\n\nVai ser na sua base ou delivery?`;
+      const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.open(link, '_blank');
+    }
+
+    // ----- CONTADOR DE DRINKS SELECIONADOS -----
+    function atualizarContador() {
+      const countSpan = document.getElementById('drinksCount');
+      if (!countSpan) return;
+      
+      const checked = document.querySelectorAll('input[type=checkbox]:checked').length;
+      countSpan.innerText = checked;
+      
+      const btn = document.querySelector('.send-button');
+      if (checked > 0) {
+        btn.style.background = '#e63946';
+        btn.style.boxShadow = '0 0 20px #e63946';
+      } else {
+        btn.style.background = '#b02a37';
+        btn.style.boxShadow = 'none';
+      }
+    }
+
+    // ----- TESTIMONIAL SLIDER -----
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    
+    function mostrarTestimonial(index) {
+      if (!testimonials.length) return;
+      
+      testimonials.forEach(t => t.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      
+      testimonials[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentTestimonial = index;
+    }
+    
+    function mudarTestimonial(index) {
+      mostrarTestimonial(index);
+    }
+    
+    // ----- INICIALIZAÇÃO -----
+    document.addEventListener('DOMContentLoaded', function() {
+      const checkboxes = document.querySelectorAll('input[type=checkbox]');
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', atualizarContador);
+      });
+      atualizarContador();
+      mostrarTestimonial(0);
+      
+      // Rotativo automático
+      setInterval(() => {
+        if (!testimonials.length) return;
+        let next = (currentTestimonial + 1) % testimonials.length;
+        mostrarTestimonial(next);
+      }, 6000);
+      
+      // Barra de pesquisa
+      const header = document.querySelector('.header-badass');
+      const searchDiv = document.createElement('div');
+      searchDiv.className = 'search-container';
+      searchDiv.innerHTML = `
+        <i class="fas fa-search" style="color: #e63946;"></i>
+        <input type="text" id="filterDrinks" placeholder="Filtrar drinks... (ex: whiskey, vodka)" class="search-input">
+      `;
+      header.appendChild(searchDiv);
+      
+      const filterInput = document.getElementById('filterDrinks');
+      filterInput.addEventListener('keyup', function() {
+        const termo = this.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.drink-card');
+        
+        cards.forEach(card => {
+          const nome = card.querySelector('.drink-name')?.innerText.toLowerCase() || '';
+          const desc = card.querySelector('.drink-desc')?.innerText.toLowerCase() || '';
+          const categoria = card.dataset.categoria || '';
+          
+          if (nome.includes(termo) || desc.includes(termo) || categoria.includes(termo)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

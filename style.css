@@ -1,0 +1,461 @@
+/* style.css - modernizado e mais badass */
+
+body {
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  background-color: #0a0a0a;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-image: radial-gradient(circle at 30% 10%, rgba(230, 57, 70, 0.1) 0%, transparent 30%);
+}
+
+h1 {
+  font-family: 'Staatliches', cursive;
+  font-size: clamp(3rem, 10vw, 5rem);
+  color: #e63946;
+  margin: 0 0 10px;
+  text-shadow: 4px 4px 0 #000, 6px 6px 0 rgba(230, 57, 70, 0.6);
+  letter-spacing: 3px;
+  line-height: 1;
+  border-bottom: 4px solid #f1c40f;
+  display: inline-block;
+  padding-bottom: 5px;
+  transform: rotate(-0.5deg);
+}
+
+.header-badass {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  background: #1a1a1a;
+  color: #f1c40f;
+  display: inline-block;
+  padding: 8px 25px;
+  border-left: 6px solid #e63946;
+  font-weight: 800;
+  letter-spacing: 2px;
+  box-shadow: 0 5px 0 #000;
+  margin: 10px 0 15px;
+}
+
+.hero-text {
+  font-size: 1.3rem;
+  color: #ccc;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #e63946;
+  padding-bottom: 15px;
+}
+
+/* MENU GRID */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1300px;
+  margin-bottom: 40px;
+}
+
+.drink-card {
+  background: #151515;
+  border: 2px solid #2a2a2a;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px #e63946 inset;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(2px);
+  position: relative;
+}
+
+.drink-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #e63946;
+  box-shadow: 0 25px 30px -8px #e6394630, 0 0 20px #e63946;
+}
+
+.drink-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #e63946;
+  background: #333; /* fallback */
+}
+
+.drink-info {
+  padding: 18px 15px 15px;
+  background: #151515;
+  flex: 1;
+}
+
+.drink-name {
+  font-size: 1.8rem;
+  color: #f1c40f;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.drink-desc {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin: 10px 0;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.drink-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 10px;
+  font-weight: 600;
+}
+
+.drink-preco {
+  background: #222;
+  padding: 4px 12px;
+  border-radius: 30px;
+  color: #f1c40f;
+  border: 1px solid #e63946;
+  font-size: 1.1rem;
+}
+
+.drink-alcool {
+  background: #2c2c2c;
+  padding: 4px 12px;
+  border-radius: 30px;
+  color: #e63946;
+  font-weight: 800;
+  border: 1px solid #f1c40f;
+}
+
+/* checkbox estilizado */
+.checkbox-badass {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #f1c40f;
+  user-select: none;
+}
+
+.checkbox-badass input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: #222;
+  border: 2px solid #e63946;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.checkbox-badass:hover input ~ .checkmark {
+  background: #2a2a2a;
+  border-color: #f1c40f;
+}
+
+.checkbox-badass input:checked ~ .checkmark {
+  background: #e63946;
+  border-color: #f1c40f;
+}
+
+.checkbox-badass input:checked ~ .checkmark:after {
+  content: "\\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 2px;
+  left: 5px;
+}
+
+/* painel info + selo */
+.info-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background: #111;
+  border: 1px solid #e63946;
+  border-radius: 60px;
+  padding: 20px 40px;
+  margin: 20px 0 30px;
+  width: 100%;
+  max-width: 1100px;
+  box-shadow: 0 0 30px #e6394620;
+}
+
+.arte-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.arte {
+  max-width: 60px;
+  height: auto;
+  filter: drop-shadow(0 0 8px #e63946);
+}
+
+.arte-text {
+  font-family: 'Staatliches', cursive;
+  font-size: 2rem;
+  color: #f1c40f;
+  letter-spacing: 2px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-item {
+  text-align: center;
+  min-width: 80px;
+}
+
+.stat-item i {
+  font-size: 2rem;
+  color: #e63946;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.stat-num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #f1c40f;
+  line-height: 1;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+/* botão enviar */
+.send-button {
+  margin: 30px 0 20px;
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 0 10px 0 #7a1f2a;
+  border: 2px solid #f1c40f;
+  letter-spacing: 1px;
+  font-family: 'Staatliches', cursive;
+}
+
+.send-button i {
+  margin-right: 10px;
+  font-size: 1.8rem;
+}
+
+.send-button:hover {
+  background: #b02a37;
+  transform: translateY(3px);
+  box-shadow: 0 6px 0 #7a1f2a;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px 0;
+  text-align: center;
+  background: #111;
+  padding: 25px 20px;
+  border-radius: 40px;
+  border: 1px solid #2a2a2a;
+}
+
+.section-title {
+  font-family: 'Staatliches', cursive;
+  font-size: 2rem;
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+.testimonial-container {
+  min-height: 80px;
+  position: relative;
+}
+
+.testimonial {
+  display: none;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ddd;
+  animation: fade 0.5s;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.testimonial p {
+  margin-bottom: 10px;
+}
+
+.author {
+  color: #f1c40f;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.testimonial-dots {
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #333;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #e63946;
+  transform: scale(1.3);
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* FOOTER */
+.footer-badass {
+  margin-top: 40px;
+  text-align: center;
+  color: #888;
+  border-top: 1px solid #222;
+  padding-top: 25px;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.footer-badass i {
+  color: #e63946;
+  margin: 0 5px;
+}
+
+.footer-contato {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #f1c40f;
+}
+
+/* barra de pesquisa (inserida via JS) */
+.search-container {
+  margin: 20px auto 10px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  border: 2px solid #e63946;
+  border-radius: 50px;
+  padding: 8px 18px;
+}
+
+.search-container i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  font-family: 'Barlow', sans-serif;
+}
+
+.search-input::placeholder {
+  color: #777;
+  font-style: italic;
+}
+
+/* responsividade fina */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  
+  .info-panel {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  
+  .stats {
+    gap: 20px;
+  }
+  
+  .send-button {
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    width: 100%;
+  }
+  
+  .drink-name {
+    font-size: 1.5rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .drink-meta {
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+  }
+}

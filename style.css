@@ -9,7 +9,36 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-image: radial-gradient(circle at 30% 10%, rgba(230, 57, 70, 0.1) 0%, transparent 30%);
+  background-image: radial-gradient(circle at 30% 10%, rgba(115, 0, 255, 0.29) 0%, transparent 30%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('imagens/felipinhodrinks.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55% auto;
+  /* Ajuste o tamanho */
+  opacity: 0.10;
+  /* Bem suave - efeito fantasma */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Garante que o conteúdo fique acima */
+.header-badass,
+.menu,
+.info-panel,
+.send-button,
+.testimonials,
+.footer-badass {
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
@@ -90,7 +119,8 @@ h1 {
   height: 200px;
   object-fit: cover;
   border-bottom: 3px solid #e63946;
-  background: #333; /* fallback */
+  background: #333;
+  /* fallback */
 }
 
 .drink-info {
@@ -174,17 +204,17 @@ h1 {
   transition: all 0.2s;
 }
 
-.checkbox-badass:hover input ~ .checkmark {
+.checkbox-badass:hover input~.checkmark {
   background: #2a2a2a;
   border-color: #f1c40f;
 }
 
-.checkbox-badass input:checked ~ .checkmark {
+.checkbox-badass input:checked~.checkmark {
   background: #e63946;
   border-color: #f1c40f;
 }
 
-.checkbox-badass input:checked ~ .checkmark:after {
+.checkbox-badass input:checked~.checkmark:after {
   content: "\\f00c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -360,8 +390,13 @@ h1 {
 }
 
 @keyframes fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* FOOTER */
@@ -425,28 +460,28 @@ h1 {
   body {
     padding: 15px;
   }
-  
+
   .info-panel {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
     border-radius: 30px;
   }
-  
+
   .stats {
     gap: 20px;
   }
-  
+
   .send-button {
     padding: 15px 30px;
     font-size: 1.3rem;
     width: 100%;
   }
-  
+
   .drink-name {
     font-size: 1.5rem;
   }
-  
+
   .tagline {
     font-size: 1rem;
   }
